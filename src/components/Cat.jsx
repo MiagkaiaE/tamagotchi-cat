@@ -1,17 +1,17 @@
+import CatBackground from "./CatBackground";
+import CatInfo from "./CatInfo";
+
 export default function Cat() {
+  // данные о коте
+  const cat = {
+    mood: "Доволен",
+    name: "Персик",
+    energy: 80,
+  };
   return (
     <div className="cat-container">
-      <div
-        className="cat-background"
-        style={{
-          backgroundImage: "url('src/assets/images/cat-sleep-day.jpg')",
-        }}
-      ></div>
-
-      <div className="cat-info">
-        <h1>Доволен • Рыжик • Энергия: 80% </h1>
-      </div>
-
+      <CatBackground />
+      <CatInfo mood={cat.mood} name={cat.name} energy={cat.energy} />
       <div className="cat-controls">
         <button className="cat-button feed">Покормить</button>
         <button className="cat-button pet">Погладить</button>
